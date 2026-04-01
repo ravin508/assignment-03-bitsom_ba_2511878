@@ -1,0 +1,13 @@
+Starting Task 4 - Logging to File...
+
+Testing unreachable URL (ConnectionError)...
+Logged error: ConnectionError
+Testing non-existent product (ID 999)...
+Logged error: HTTPError
+
+=== Contents of error_log.txt ===
+[2026-04-01 06:24:12] ERROR in fetch_from_invalid_url: ConnectionError — HTTPSConnectionPool(host='this-host-does-not-exist-xyz.com', port=443): Max retries exceeded with url: /api (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7d9ad575d850>: Failed to resolve 'this-host-does-not-exist-xyz.com' ([Errno -2] Name or service not known)"))
+[2026-04-01 06:24:12] ERROR in lookup_product: HTTPError — 404 Not Found for product ID 999
+[2026-04-01 06:25:28] ERROR in fetch_from_invalid_url: ConnectionError — HTTPSConnectionPool(host='this-host-does-not-exist-xyz.com', port=443): Max retries exceeded with url: /api (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7d9ad575ef30>: Failed to resolve 'this-host-does-not-exist-xyz.com' ([Errno -2] Name or service not known)"))
+[2026-04-01 06:25:28] ERROR in lookup_product: HTTPError — 404 Not Found for product ID 999
+

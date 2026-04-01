@@ -1,0 +1,18 @@
+# Python Exception Handling & File I/O Notes
+
+## 1. Exception Handling
+- Use `try...except` blocks to catch and handle runtime errors (like network failures) so the program doesn't crash.
+- `requests.exceptions.ConnectionError`: A specific error used when a URL cannot be reached or the DNS fails.
+- `type(e).__name__`: A handy trick to get the string name of any exception (e.g., "ValueError", "TypeError").
+
+## 2. File Operations
+- `open(filename, mode)`:
+    - 'r': Read mode.
+    - 'a': Append mode (essential for logs so you don't delete previous entries).
+    - 'w': Write mode (overwrites everything).
+- `with` statement: The best way to open files because it automatically closes them, even if an error occurs inside the block.
+
+## 3. Logging Best Practices
+- Always include a timestamp using `datetime.now()` for a clear timeline.
+- Label the function where the error happened to save time during debugging.
+- Use `encoding="utf-8"` to ensure your logs are readable on any operating system.
